@@ -130,4 +130,6 @@ console.log(newres)
 setTimeout(function() { alert(`Hello`) }, 5000);
 
 
-
+// упростим функцию. Лямпда функция
+const person = people.find(person => person.budget === 3500)
+console.log(person)
