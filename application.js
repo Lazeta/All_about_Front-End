@@ -227,21 +227,21 @@
 
 
 
-// // #3
-// const sumCells = document.querySelectorAll('.sum-cell');
-// let result = {};
-// for(let i = 0; i < sumCells.length; i++) {
-//     let cellClass = sumCells[i].classList;
-//     console.log(cellClass);
-//     for(let k = 0; k < cellClass.length; k++) {
-//         if  (cellClass[k] in result) {
-//             result[cellClass[k]] += +sumCells[i].textContent;
-//         }
-//         else {
-//             result[cellClass[k]] = +sumCells[i].textContent;
-//         }
-//     }
-// }
-// console.log(result);
-// document.querySelector('.sum-result-1').textContent = (result.aaa);
-// document.querySelector('.sum-result-2').textContent = (result.bbb);
+// #3
+const sumCells = document.querySelectorAll('.sum-cell');
+let result = {};
+for(let i = 0; i < sumCells.length; i++) {
+    let cellClass = sumCells[i].classList;
+    console.log(cellClass);
+    for(let k = 0; k < cellClass.length; k++) {
+        if  (cellClass[k] in result) {
+            result[cellClass[k]] += +sumCells[i].textContent;
+        }
+        else {
+            result[cellClass[k]] = +sumCells[i].textContent;
+        }
+    }
+}
+console.log(result);
+document.querySelector('.sum-result-1').textContent = (result.aaa);
+document.querySelector('.sum-result-2').textContent = (result.bbb);

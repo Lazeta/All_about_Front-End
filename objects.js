@@ -1,3 +1,4 @@
+/*
 const person = {
     name: "John",
     age : 20
@@ -11,16 +12,17 @@ let person3 = {
     age: 32,
     lastName: 'Makaskvil'
 }
+*/
 
-
-// indexOf выведел весь объект
+/*
+// indexOf выведет весь объект
 const people = [
     {name2: 'Vlad', budget: 4200},
     {name2: 'Elena', budget: 3500},
     {name2: 'Victoria', budget: 1700},
 ]
 console.log(people.indexOf())
-// // выведит строку части объекта который удовлетворит условиям
+// // выведет строку части объекта который удовлетворит условиям
 const index = people.findIndex(predicate= function(person4) {
     return person4.budget === 3500
 })
@@ -32,9 +34,9 @@ const person5 = people.find(function(person5) {
 
 // упростим функцию. Лямпда функция
 const person6 = people.find(person6 => person6.budget === 3500)
+*/
 
-
-
+/*
 const person7 = {
     name: 'Vladilen',
     age: 26,
@@ -58,7 +60,9 @@ person7.languages.push('by')
 console.log(person7)
 person7['key_4'] = undefined
 delete person7['key_4']
+*/
 
+/*
 const name4 = person7.name
 const age4 = person7.age
 const languages4 = person7.languages
@@ -72,8 +76,9 @@ console.log(name, age, languages)
 const {name: personName = 'Space', age: personAge = 10, languages: personLanguages = 'ua'} = person7
 console.log(personName, personAge, personLanguages)
 console.log('')
+*/
 
-
+/*
 const person8 = {
     name: 'Vladilen',
     age: 26,
@@ -105,8 +110,9 @@ Object.keys(person8).forEach((key) => {
     console.log('value:', person8[key])
 }) 
 console.log('')
+*/
 
-
+/*
 // context
 const person9 = {
     name: 'Vladilen',
@@ -160,3 +166,33 @@ console.log('')
 // const bound = logger.keys.bind(person10)
 // bound()
 // logger.keys.call((person10))
+*/
+
+// let user = new Object(); // синтаксис "конструктор объекта"
+// let user = {}; // синтаксис "литерал объекта"
+
+const person = {
+    name: "John",
+    age : 20,
+};
+const person2 = {
+    question: "?",
+    human: true,
+}
+let person3 = {
+    name: 'Jony',
+    age: 32,
+    lastName: 'Makaskvil',
+}
+console.log(person.name)
+console.log(person.name[0])
+console.log(person.name[2 - length])
+console.log(person.name[length + 2])
+console.log(person.name[0].toLowerCase())
+console.log(person.name.toLowerCase())
+console.log(person.name + person.age)
+console.log(person.name[2] + person.age)
+console.log(person.age + person3.age)
+console.log(`${person.name} `+ `has ${person3.age}${person2.question}`)
+console.log(person2.isAdmin = true, person2)
+console.log(delete person2.isAdmin, person2)
