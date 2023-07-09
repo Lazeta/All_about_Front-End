@@ -168,8 +168,10 @@ console.log('')
 // logger.keys.call((person10))
 */
 
+/*
 // let user = new Object(); // синтаксис "конструктор объекта"
 // let user = {}; // синтаксис "литерал объекта"
+// объект объявленный с помощью const может быть изменён
 
 const person = {
     name: "John",
@@ -184,7 +186,7 @@ let person3 = {
     age: 32,
     lastName: 'Makaskvil',
 }
-console.log(person.name)
+console.log(person.name) 
 console.log(person.name[0])
 console.log(person.name[2 - length])
 console.log(person.name[length + 2])
@@ -196,3 +198,103 @@ console.log(person.age + person3.age)
 console.log(`${person.name} `+ `has ${person3.age}${person2.question}`)
 console.log(person2.isAdmin = true, person2)
 console.log(delete person2.isAdmin, person2)
+person3.lastName = "Max"
+console.log(person3)
+
+// это вызовет синтаксическую ошибку
+// person.likes birds = true
+// для этого есть квадратные скобки
+person["likes birds"] = true
+console.log(person)
+let key = "likes birds"; // имя свойства может хранится в переменной
+console.log(person[key] = true);
+*/
+
+/*
+let key = prompt("What are you want to know about user?")
+const person11 = {
+    
+}
+person11.key
+person11.key = "Billy";
+person11.value = 'Billy'; // или добавить ключ или к ключу затем добавить значение через value присваивание.
+console.log(person11)
+*/
+
+/*
+let fruit = prompt("How is fruit buy?", "apple");
+let bag = {
+    [fruit]: 5, // the property name will be taken from the fruit variable
+}
+// or
+// let bag = {};
+// bag[fruit] = 5
+alert(bag.apple); // 5, if fruit="apple"
+// we may use more complex expressions
+let fruit2 = 'apple';
+let bag2 = {
+    [fruit2 + 'Computers']: 5 // bag2.appleComputers = 5
+};
+// Если наши переменные известны, то используем точку,
+// если же нам требуется более сложные конструкции, то квадратные скобки
+*/
+
+/*
+function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+    // ...другие свойства
+  };
+}
+
+let user = makeUser("John", 30);
+alert(user.name); // John
+
+// more short record
+function makeUser(name, age) {
+  return {
+    name, // то же самое, что и name: name
+    age, // то же самое, что и age: age
+    // ...
+  };
+}
+
+let user2 = {
+  name2, // тоже самое, что и name:name
+  age2: 30,
+};
+*/
+
+/*
+// Ограничения на имена свойств в объектах нет.
+// эти имена свойств допустимы
+let obj = {
+  for: 1,
+  let: 2,
+  return: 3,
+  0: "Text" // то же самое что и "0": "Text"
+};
+console.log(obj.for + obj.let + obj.return); // 6
+obj.__proto__ = 5; // исключение из правил присвоения
+console.log(obj.__proto__) // [object Object], value - this is object, that is not that, what we expected
+*/
+
+/*
+// Проверка существования свойства, оператор «in»
+let user = {}
+console.log(user.noSuchProperty === undefined); // true значает "no property"
+// special operator "in" for examination 
+// "key" in object // example
+// details
+user.name = "John";
+user['age'] = 30;
+console.log(user)
+console.log("age" in user); // true
+console.log("blabla" in user);
+// may down quotes
+let key = "age";
+console.log(key in user)
+// 'in' use when we have property 'undefined'
+*/
+
