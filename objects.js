@@ -298,3 +298,22 @@ console.log(key in user)
 // 'in' use when we have property 'undefined'
 */
 
+/*
+// для перебора всех свойств объекьта используется цикл for..in
+// for (key in object){
+//     // тело цикла выполняется для каждого свойства объекта
+// }
+
+let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true,
+};
+
+for(let key in user) {
+    // keys
+    console.log(key); // name, age, isAdmin
+    // values keys
+    console.log(user[key]); // John, 30, true
+}
+*/
